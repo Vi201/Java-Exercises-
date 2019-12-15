@@ -1,0 +1,31 @@
+package NumOfYears;
+import java.util.Scanner;
+
+/*(Find the digits of years) Write a program that prompts the user to enter the
+minutes(e.g., 1 billion), and displays the number of years and remaining days for
+the minutes. For simplicity, assume that a year has 365 days. 
+*/
+public class NumOfYears
+{    
+    public static void main(String[] args)
+    {   
+        // Create a Scanner object
+        Scanner input = new Scanner(System.in);
+        
+        // Variables
+        int minutes, years, days;
+        
+        System.out.print("Enter the number of minutes: ");
+        minutes = input.nextInt();
+        
+        // number of years
+        years = minutes / 525600; 
+        
+        // numbr of days
+        days = (minutes % 525600) / 1440;
+       
+        // Outputs to screen
+        System.out.println(minutes + " minutes is approximately " + years + " years and "
+        + days + " days.");
+    }
+}
