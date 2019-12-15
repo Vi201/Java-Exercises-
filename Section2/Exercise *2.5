@@ -1,0 +1,31 @@
+package FinancialApplication;
+import java.util.Scanner;
+
+ /*(Financial application: calculate tips) Write a program that reads the subtotal
+    and the gratuity rate, then computes the gratuity and total. For example, if the 
+    user enters 10 for the subtotal and 15% for the gratuity rate, the program displays
+    $1.5 as gratuity and $11.5 as total.
+ */
+ 
+public class FinancialApplication
+{    
+    public static void main(String[] args)
+    {   
+        // Create a Scanner object
+        Scanner input = new Scanner(System.in);
+        
+        // Variables
+        double subtotal, total, gratuity, gratuityRate;
+        
+        System.out.print("Enter the subtotal and a gratuity rate: ");
+        subtotal = input.nextDouble();
+        gratuityRate = input.nextDouble();
+        
+        // Calculates gratuity and subtotal
+        gratuity = (gratuityRate / 100) * subtotal;
+        total = gratuity + subtotal;
+        
+        // Outputs to screen
+        System.out.println("The gratuity is $" + gratuity + " and total is $" + total);
+    }
+}
