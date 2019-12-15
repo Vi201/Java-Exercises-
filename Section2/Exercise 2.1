@@ -1,0 +1,33 @@
+package test;
+import java.util.Scanner;
+
+  /*(Convert Celsius to Fahrenheit) Write a program that reads a Celsius 
+     degree in a double value from the console, the converts it to Fahrenheit,
+     and displays the result. The formula for the conversion is as follows:
+
+        Fahrenheit = (9 / 5) * Celsius + 32
+  */
+
+public class Test
+{    
+    public static void main(String[] args)
+    {        
+        //Create a Scanner object
+        Scanner input = new Scanner(System.in);
+
+        // Variables 
+        double Celsius, Fahrenheit;
+
+        // Prints out to user
+        System.out.print("Enter a degree in Celsius: ");
+
+        // Input Celsius
+        Celsius = input.nextDouble();
+
+        //Formula for finding the Fahrenheit
+        Fahrenheit = (9.0 / 5) * Celsius + 32;
+
+        System.out.println(Celsius + " Celsius is " + Fahrenheit + " Fahrenheit");
+
+    }
+}
