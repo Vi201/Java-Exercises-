@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+/*(Physics: acceleration) Average acceleration is defined as the change of velocity
+divided by the time taken to make the change, as given by the following formula:
+                     v1 - v0
+                 a=----------
+                        t
+Write a program that prompts the user to ener the starting velocity v0 in meters/seconds,
+the ending velocity v1 in meters/second, and the time span t in seconds, then
+displays the average acceleration. 
+*/
+
+public class Acceleration
+{    
+    public static void main(String[] args)
+    {   
+        // Create a Scanner object
+        Scanner input = new Scanner(System.in);
+        
+        // Variables
+            // t = time
+            // v0 = starting velocity
+            // v1 = ending velocity
+        double v0,v1,t, a; 
+        
+        // Prompts user to enter v0, v1 and t
+        System.out.print("Enter v0, v1, and t: ");
+        v0 = input.nextDouble();        // Holds Starting Value
+        v1 = input.nextDouble();        // Holds Ending Value
+        t = input.nextDouble();         // Holds Time
+        
+        // Calculates the average acceleration
+        a = (v1 - v0) / t;
+        
+        // Displays result to user 
+        System.out.print("The average acceleration is " + (float)a); // (Float) Rounds the number off
+    }
+}
